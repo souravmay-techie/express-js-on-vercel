@@ -6,29 +6,6 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-class Holder {
-    // Define the static variable using the 'static' keyword
-    static totaldata = [];
-
-    constructor(data) {
-        //this.accountHolder = accountHolder;
-        // Increment the static variable every time a new instance is created
-        // if(Holder.totaldata.length>10){
-        //   Holder.totaldata=[];
-        // }
-      Holder.totaldata.push(data);
-    }
-
-    // A static method to access the static variable
-    static holders() {
-        //
-        var daata = '</br>';  
-        Holder.totaldata.forEach((fruit) => {
-          daata= daata + fruit +'<br/>';
-        });          
-        return daata;
-    }
-}
 var x=[];
 const app = express()
 app.get('/das', (req, res) => {
