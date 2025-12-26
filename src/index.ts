@@ -32,7 +32,7 @@ const app = express()
 app.get('/das', (req, res) => {
   //const das = req.query.page;
   //Holder hold = new Holder(das);  
-  res.type('html').send(`Holder.holders()`);
+  res.type('html').send(Holder.holders());
 })
 
 // Home route - HTML
