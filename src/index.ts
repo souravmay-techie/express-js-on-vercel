@@ -1,3 +1,4 @@
+
 import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -28,11 +29,14 @@ class Holder {
         return daata;
     }
 }
+var x=[];
 const app = express()
 app.get('/das', (req, res) => {
-  const das = req.query.page;
-  //Holder hold = new Holder(das);  
-  res.type('html').send('Holder.holders()');
+  x.push(req.query.page);
+    var daata = '</br>';  
+  //Holder hold = new Holder(das);
+    x.forEach((each)=>{daata= daata + each +'<br/>';});
+  res.type('html').send(daata);
 })
 
 // Home route - HTML
