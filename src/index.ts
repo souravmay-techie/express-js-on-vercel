@@ -62,7 +62,10 @@ app.get('/', (req, res) => {
 })
 
 app.get('/about', function (req, res) {
-  res.sendFile(path.join(__dirname, '..', 'components', 'about.htm'))
+  //res.sendFile(path.join(__dirname, '..', 'components', 'about.htm'))
+    //const das = req.query.page;
+  //Holder hold = new Holder(das);  
+  res.type('html').send(`Holder.holders()`)
 })
 
 // Example API endpoint - JSON
