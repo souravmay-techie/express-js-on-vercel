@@ -32,9 +32,8 @@ class Holder {
 const app = express()
 app.get('/das', (req, res) => {
   const das = req.query.page;
-  res.type('html').send(`
-    das
-  `)
+  Holder hold = new Holder(das);  
+  res.type('html').send(Holder.holders());
 })
 
 // Home route - HTML
