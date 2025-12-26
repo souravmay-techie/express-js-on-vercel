@@ -14,7 +14,7 @@ app.get('/das', (req, res) => {
   //Holder hold = new Holder(das);
     x.forEach((each)=>{daata= daata + each +'<br/>';});
   res.type('html').send(daata);
-})
+});
 
 // Home route - HTML
 app.get('/', (req, res) => {
