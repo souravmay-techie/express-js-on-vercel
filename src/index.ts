@@ -5,10 +5,35 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
+class Holder {
+    // Define the static variable using the 'static' keyword
+    static totaldata = [];
+
+    constructor(data) {
+        //this.accountHolder = accountHolder;
+        // Increment the static variable every time a new instance is created
+        if(totaldata.length>10){
+          totaldata=[];
+        }
+      totaldata.push(data);
+    }
+
+    // A static method to access the static variable
+    static holders() {
+        if(totaldata==[]){
+          return "no data";
+        var daata = '</br>';  
+        totaldata.forEach((fruit) => {
+          daata= daata + fruit +'<br/>';
+        });          
+        return daata;
+    }
+}
 const app = express()
 app.get('/das', (req, res) => {
+  const das = req.query.page;
   res.type('html').send(`
-    helloworld
+    das
   `)
 })
 
