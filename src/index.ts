@@ -6,6 +6,11 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const app = express()
+app.get('/das', (req, res) => {
+  res.type('html').send(`
+    helloworld
+  `)
+})
 
 // Home route - HTML
 app.get('/', (req, res) => {
