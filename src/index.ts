@@ -15,6 +15,10 @@ app.get('/das', (req, res) => {
     x.forEach((each)=>{daata= daata + each +'<br/>';});
   res.type('html').send(daata);
 });
+app.get('/das', (req, res) => {
+  x=[];
+  res.type('html').send('flushed');
+});
 
 // Home route - HTML
 app.get('/', (req, res) => {
