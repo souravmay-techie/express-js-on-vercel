@@ -12,9 +12,9 @@ class Holder {
     constructor(data) {
         //this.accountHolder = accountHolder;
         // Increment the static variable every time a new instance is created
-        if(Holder.totaldata.length>10){
-          Holder.totaldata=[];
-        }
+        // if(Holder.totaldata.length>10){
+        //   Holder.totaldata=[];
+        // }
       Holder.totaldata.push(data);
     }
 
