@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename)
 var x=[];
 const app = express()
 app.get('/das', (req, res) => {
-  x.push(req.query.page);
+  x.push(req.query);
     var daata = '</br>';  
   //Holder hold = new Holder(das);
     x.forEach((each)=>{daata= daata + each +'<br/>';});
