@@ -20,9 +20,7 @@ class Holder {
 
     // A static method to access the static variable
     static holders() {
-        if(Holder.totaldata==[]){
-          return "no data";
-        }
+        //
         var daata = '</br>';  
         Holder.totaldata.forEach((fruit) => {
           daata= daata + fruit +'<br/>';
