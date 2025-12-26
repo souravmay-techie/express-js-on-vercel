@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename)
 
 var x=[];
 const app = express()
-app.get('/das', (req, res) => {
+app.get('/dasx', (req, res) => {
   x.push(req.originalUrl);
     var daata = '</br>';  
   //Holder hold = new Holder(das);
