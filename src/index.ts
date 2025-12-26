@@ -12,18 +12,18 @@ class Holder {
     constructor(data) {
         //this.accountHolder = accountHolder;
         // Increment the static variable every time a new instance is created
-        if(totaldata.length>10){
-          totaldata=[];
+        if(Holder.totaldata.length>10){
+          Holder.totaldata=[];
         }
-      totaldata.push(data);
+      Holder.totaldata.push(data);
     }
 
     // A static method to access the static variable
     static holders() {
-        if(totaldata==[]){
+        if(Holder.totaldata==[]){
           return "no data";
         var daata = '</br>';  
-        totaldata.forEach((fruit) => {
+        Holder.totaldata.forEach((fruit) => {
           daata= daata + fruit +'<br/>';
         });          
         return daata;
